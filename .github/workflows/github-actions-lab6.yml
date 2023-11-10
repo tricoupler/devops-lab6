@@ -1,0 +1,13 @@
+name: GitHub Actions Lab 6
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Clone-and-Checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the git repo
+        run: git clone https://github.com/tricoupler/devops-lab6.git
+
+      - name: Run the build script
+        run: make
+        
