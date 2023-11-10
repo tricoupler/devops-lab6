@@ -1,0 +1,12 @@
+name: GitHub Actions Lab 6
+on: [push]
+jobs:
+  Clone-and-Checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        
+      - name: Run the build script
+        run: make
+        
